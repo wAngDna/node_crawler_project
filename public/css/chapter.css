@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.w {
+    width: 1000px;
+    margin: 50px auto;
+}
+
+.w .top {
+    box-sizing: border-box;
+    padding: 20px;
+    background: #f1f1f1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.w .top .author {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.w .top .author span,
+.w .top .new span {
+    margin-right: 30px;
+    color: #666;
+}
+
+.w .top .new {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.w .top .intr {
+    text-indent: 2em;
+    color: #666;
+    font-size: 12px;
+}
+
+.w .chapter {
+    margin-top: 10px;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.w .chapter h4 {
+    padding: 0 5px;
+}
+
+.w .chapter ul li {
+    cursor: pointer;
+    float: left;
+    width: 25%;
+    margin: 10px 0;
+    font-size: 13px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed;
+}
+
+.w .chapter ul li:hover {
+    color: blue;
+}

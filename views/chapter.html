@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/chapter.css">
+    <script src="/js/jQuery.js"></script>
+    <script src="/js/vue.js"></script>
+    <title>小说列表</title>
+</head>
+
+<body>
+    <div id="chapterVue">
+        <div class="w">
+            <div class="top">
+                <h1>{{bookChapter.bookmsg.bookname}}</h1>
+                <div class="author">
+                    <span>作 者：{{bookChapter.bookmsg.bookauthor}}</span>
+                    <span>类 别：{{bookChapter.bookmsg.booktype}}</span>
+                </div>
+                <div class="new">
+                    <span>最新章节：{{bookChapter.bookmsg.booknew}}</span>
+                    <span>最后更新：{{bookChapter.bookmsg.booknewtime}}</span>
+                </div>
+                <div class="intr">
+                    <p>{{bookChapter.bookmsg.bookintr}}</p>
+                </div>
+            </div>
+            <div class="chapter clearfix">
+                <h4>章节列表：</h4>
+                <ul>
+                    <li v-for="(item,index) in bookChapter.bookChapter" :key="index" @click="getArticleInner(item.index)">{{item.title}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="/js/chapter.js"></script>
+</body>
+
+
+</html>
